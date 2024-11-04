@@ -15,19 +15,6 @@ An interactive platform where football fans can read about Jude Bellingham, Pedr
 
 **Client:** React
 
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
 
 ## Run Locally
 
@@ -54,4 +41,6 @@ Start the server
 ```bash
   npm run start
 ```
+## License
 
+[MIT](https://choosealicense.com/licenses/mit/)
