@@ -1,6 +1,6 @@
 
 # Who's The Best? Football Celebrity Website
-An interactive platform where football fans can read about Jude Bellingham, . It features profiles of these football stars, and some facts about their football careers.
+An interactive platform where football fans can read about Jude Bellingham, Pedro González López, Jamal Musiala and Lamine Yamal. It features profiles of these football stars, and some facts about their football careers.
 
 
 ## Authors
