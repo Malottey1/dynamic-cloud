@@ -10,3 +10,8 @@ def index():
 @app.route('/yamal')
 def yamal():
     return render_template('yamal.html') 
+
+#route for Musiala page
+@app.route('/musiala')
+def musiala():
+    return render_template('musiala.html')
