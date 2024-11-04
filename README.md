@@ -13,10 +13,7 @@ An interactive platform where football fans can read about Jude Bellingham, Pedr
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
-
-**Server:** Node, Express
-
+**Client:** React
 
 ## Deployment
 
