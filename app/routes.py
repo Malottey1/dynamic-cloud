@@ -3,15 +3,23 @@ from . import create_app
 
 app = create_app()
 
-@app.route('/')
+
+@app.route("/")
 def index():
-    return render_template('index.html')  
+    return render_template("index.html")
 
-@app.route('/yamal')
+
+@app.route("/yamal")
 def yamal():
-    return render_template('yamal.html') 
+    return render_template("yamal.html")
 
-#route for Musiala page
-@app.route('/musiala')
+
+# route for Musiala page
+@app.route("/musiala")
 def musiala():
-    return render_template('musiala.html')
+    return render_template("musiala.html")
+
+
+@app.route("/bellingham")
+def bellingham():
+    return render_template("bellingham.html")
