@@ -1,46 +1,49 @@
+# Who’s The Best? Football Celebrity Website
 
-# Who's The Best? Football Celebrity Website
-An interactive platform where football fans can read about Jude Bellingham, Pedro González López, Jamal Musiala and Lamine Yamal. It features profiles of these football stars, and some facts about their football careers.
-
+An interactive platform where football fans can read about Jude Bellingham, Pedro González López, Jamal Musiala, and Lamine Yamal. It features profiles of these football stars and some facts about their football careers.
 
 ## Authors
 
-- [@Malottey1](https://github.com/Malottey1)
-- [@Joseph-Lartey](https://github.com/Joseph-Lartey)
-- [@sedemkofi](https://github.com/sedemkofi)
-- [@AlvinBrocke](https://github.com/AlvinBrocke )
-
+- @Malottey1
+- @Joseph-Lartey
+- @sedemkofi
+- @AlvinBrocke
 
 ## Tech Stack
 
 **Client:** Flask
 
-
 ## Run Locally
 
-Clone the project
+Clone the project:
 
-```bash
-  git clone https://github.com/Malottey1/dynamic-cloud
-```
 
-Go to the project directory
+git clone https://github.com/Malottey1/dynamic-cloud
 
-```bash
-  cd dynamic-cloud
-```
+Go to the project directory:
 
-Install dependencies
+cd dynamic-cloud
 
-```bash
-  npm install
-```
+Install dependencies:
 
-Start the server
+pip install -r requirements.txt
 
-```bash
-  npm run start
-```
-## License
+Start the server:
 
-[MIT](https://choosealicense.com/licenses/mit/)
+python app.py
+
+Dependencies
+
+The required dependencies are listed in requirements.txt:
+
+Flask==2.0.2
+gunicorn==20.1.0
+requests==2.26.0
+
+Live Demo
+
+You can check out the live version of the website here: [Who’s The Best? Football Celebrity Website](https://dynamic-cloud-4ddd165c06de.herokuapp.com/)
+
+License
+
+MIT
