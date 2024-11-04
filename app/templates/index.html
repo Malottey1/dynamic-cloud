@@ -16,82 +16,95 @@
             <img src="{{ url_for('static', filename='images/wtb-2.svg') }}" alt="Logo" class="logo">
         </div>
     </div>
-    
+
     <div class="player-list" id="player-list">
         <div class="player-container">
             <a href="{{ url_for('bellingham') }}">
-                <img class="player-container-img" src="{{ url_for('static', filename='images/2.png') }}" alt="" data-hover="{{ url_for('static', filename='images/1.png') }}" data-original="{{ url_for('static', filename='images/2.png') }}">
+                <img class="player-container-img" 
+                     src="{{ url_for('static', filename='images/2.png') }}" 
+                     alt="Jude Bellingham" 
+                     data-hover="{{ url_for('static', filename='images/1.png') }}" 
+                     data-original="{{ url_for('static', filename='images/2.png') }}">
             </a>
         </div>
         <div class="player-container">
-            <a href="musiala.html">
-                <img class="player-container-img" src="{{ url_for('static', filename='images/3.png') }}" alt="" data-hover="{{ url_for('static', filename='images/4.png') }}" data-original="{{ url_for('static', filename='images/3.png') }}">
+            <a href="{{ url_for('musiala') }}">  <!-- Update href for consistency -->
+                <img class="player-container-img" 
+                     src="{{ url_for('static', filename='images/3.png') }}" 
+                     alt="Jamal Musiala" 
+                     data-hover="{{ url_for('static', filename='images/4.png') }}" 
+                     data-original="{{ url_for('static', filename='images/3.png') }}">
             </a>
         </div>
         <div class="player-container">
             <a href="{{ url_for('pedri') }}">
-                <img class="player-container-img" src="{{ url_for('static', filename='images/5.png') }}" alt="" data-hover="{{ url_for('static', filename='images/6.png') }}" data-original="{{ url_for('static', filename='images/5.png') }}">
+                <img class="player-container-img" 
+                     src="{{ url_for('static', filename='images/5.png') }}" 
+                     alt="Pedri" 
+                     data-hover="{{ url_for('static', filename='images/6.png') }}" 
+                     data-original="{{ url_for('static', filename='images/5.png') }}">
             </a>
         </div>
         <div class="player-container">
             <a href="{{ url_for('yamal') }}">
-                <img class="player-container-img" src="{{ url_for('static', filename='images/8.png') }}" alt="" data-hover="{{ url_for('static', filename='images/7.png') }}" data-original="{{ url_for('static', filename='images/8.png') }}">
+                <img class="player-container-img" 
+                     src="{{ url_for('static', filename='images/8.png') }}" 
+                     alt="Lamine Yamal" 
+                     data-hover="{{ url_for('static', filename='images/7.png') }}" 
+                     data-original="{{ url_for('static', filename='images/8.png') }}">
             </a>
         </div>
     </div>
+    
     <div class="footer"></div>
 
-    
+    <script>
+        // Handle player image hover effects
+        const playerContainers = document.querySelectorAll('.player-container');
+
+        playerContainers.forEach(container => {
+            const img = container.querySelector('.player-container-img');
+
+            container.addEventListener('mouseenter', () => {
+                img.src = img.dataset.hover;  // Change to hover image  
+            });
+
+            container.addEventListener('mouseleave', () => {
+                img.src = img.dataset.original; // Revert to original image
+            });
+        });
+
+        // Smooth scroll function
+        function smoothScroll(target, duration) {
+            const start = window.scrollY; // Get current scroll position
+            const targetPosition = target.getBoundingClientRect().top + start; // Calculate target position
+            const distance = targetPosition - start; // Calculate distance to scroll
+            let startTime = null; // Initialize start time
+
+            const animation = currentTime => {
+                if (startTime === null) startTime = currentTime;  
+                const timeElapsed = currentTime - startTime; // Calculate elapsed time
+                const progress = Math.min(timeElapsed / duration, 1); // Calculate progress
+                const ease = easeInOutCubic(progress); // Apply easing function
+                window.scrollTo(0, start + (distance * ease)); // Scroll to the position
+
+                if (timeElapsed < duration) requestAnimationFrame(animation); // Continue animation if not finished
+            };
+
+            requestAnimationFrame(animation); // Start the animation
+        }
+
+        // Easing function for smoother scrolling
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+        }
+
+        // Add click event to the scroll button
+        const scrollButton = document.querySelector('.scroll-down-button');
+        scrollButton.addEventListener('click', () => {
+            const playerList = document.getElementById('player-list');
+            smoothScroll(playerList, 1500); // Scroll to player list over 1500 milliseconds
+        });
+    </script>
 </body>
-<script>  
-    const playerContainers = document.querySelectorAll('.player-container');  
-
-    playerContainers.forEach(container => {  
-        const img = container.querySelector('.player-container-img');  
-
-        container.addEventListener('mouseenter', () => {  
-            img.src = img.dataset.hover;  // Change to hover image  
-        });  
-
-        container.addEventListener('mouseleave', () => {  
-            img.src = img.dataset.original; 
-        });  
-    }); 
-
-    // const scrollButton = document.querySelector('.scroll-down-button');  
-    // scrollButton.addEventListener('click', () => {  
-    //     const playerList = document.getElementById('player-list');  
-    //     playerList.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to player list  
-    // });   
-    function smoothScroll(target, duration) {  
-        const start = window.scrollY; // Get the current scroll position  
-        const targetPosition = target.getBoundingClientRect().top + start; // Get the target position  
-        const distance = targetPosition - start; // Calculate the distance to scroll  
-        let startTime = null; // Initialize a start time  
-
-        const animation = currentTime => {  
-            if (startTime === null) startTime = currentTime;  
-            const timeElapsed = currentTime - startTime; // Calculate elapsed time  
-            const progress = Math.min(timeElapsed / duration, 1); // Calculate progress  
-            const ease = easeInOutCubic(progress); // Apply easing function  
-            window.scrollTo(0, start + (distance * ease)); // Scroll to the position  
-
-            if (timeElapsed < duration) requestAnimationFrame(animation); // Continue animation if not finished  
-        };  
-
-        requestAnimationFrame(animation); // Start the animation  
-    }  
-
-    // Easing function for a smoother effect  
-    function easeInOutCubic(t) {  
-        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;  
-    }  
-
-    // Add click event to the button  
-    const scrollButton = document.querySelector('.scroll-down-button');  
-    scrollButton.addEventListener('click', () => {  
-        const playerList = document.getElementById('player-list');  
-        smoothScroll(playerList, 1500); // Scroll to the player list over 1500 milliseconds (1.5 seconds)  
-    });  
-</script>
 </html>

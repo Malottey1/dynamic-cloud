@@ -1,81 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jamal Musiala</title>
-  <link rel="stylesheet" href="../../static/css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <style>
-    /* Dark mode styling */
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    
-    .header, .line {
-      background-color: #1e1e1e;
-      border-bottom: 5px solid #f3913d;
-    }
-    
-    .account {
-      color: #e0e0e0;
-    }
-    
-    /* Image styling and hover animation */
-    .main-image {
-      width: 90%;
-      max-width: 700px;
-      border-radius: 8px;
-      margin: 0 auto 20px;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .main-image:hover {
-      transform: scale(1.05);
-    }
-    
-    /* Highlighted number hover effect */
-    .highlighted-number {
-      font-size: 100px;
-      font-weight: bold;
-      color: #f28d4c;
-      transition: color 0.3s ease;
-    }
-    .highlighted-number:hover {
-      color: #f3913d;
-    }
-    
-    /* Account and logo hover effect */
-    .account:hover {
-      color: #f3913d;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
-    
-    .logo img:hover {
-      filter: brightness(1.2);
-      transition: filter 0.3s ease;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamal Musiala</title>
+    <link rel="stylesheet" href="../../static/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        /* Dark mode styling */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .header, .line {
+            background-color: #1e1e1e;
+            border-bottom: 5px solid #f3913d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .account {
+            color: #e0e0e0;
+            cursor: pointer;
+        }
+        
+        /* Image styling and hover animation */
+        .main-image {
+            width: 90%;
+            max-width: 700px;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .main-image:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Highlighted number hover effect */
+        .highlighted-number {
+            font-size: 100px;
+            font-weight: bold;
+            color: #f28d4c;
+            transition: color 0.3s ease;
+        }
+        
+        .highlighted-number:hover {
+            color: #f3913d;
+        }
+        
+        /* Account and logo hover effect */
+        .account:hover {
+            color: #f3913d;
+            transition: color 0.3s ease;
+        }
+        
+        .logo img:hover {
+            filter: brightness(1.2);
+            transition: filter 0.3s ease;
+        }
+        
+        .text-content {
+            padding: 20px;
+        }
+        
+        .space-grotesk-header {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+        
+        .space-grotesk-paragraph {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-      <div class="logo"><img src="../../static/images/wtb-2.svg" alt="Logo"></div>
-      <div class="account">Account</div>
-  </header>
-  <div class="line"></div>
-  <div class="container">
-    <main class="content">
-      <img src="../../static/images/9.jpg" alt="Main image" class="main-image">
-      <div class="text-content">
-        <div class="highlighted-number">42</div>
-        <h2 class="space-grotesk-header">Jamal Musiala</h2>
-        <p class="space-grotesk-paragraph">Jamal Musiala (born 26 February 2003) is a German professional footballer who plays as an attacking midfielder or winger for Bundesliga club Bayern Munich and the Germany national team. Known for his dribbling, agility, and creative playmaking, he is regarded as one of Europe’s most promising young talents.</p>
-        <p class="space-grotesk-paragraph">Born in Stuttgart, Germany, Musiala spent much of his youth in England, developing his skills in Chelsea’s academy before joining Bayern Munich in 2019. He made his debut for the senior team in 2020 at the age of 17, quickly establishing himself as a key player for the club.</p>
-        <p class="space-grotesk-paragraph">Musiala chose to represent Germany at the international level despite being eligible for England as well. He debuted for the German national team in 2021 and has since been a regular, known for his ability to navigate tight spaces and make crucial plays under pressure.</p>
-      </div>
-    </main>
-  </div>
+    <header class="header">
+        <div class="logo">
+            <img src="../../static/images/wtb-2.svg" alt="Logo">
+        </div>
+        <div class="account">Account</div>
+    </header>
+    <div class="line"></div>
+    <div class="container">
+        <main class="content">
+            <img src="../../static/images/9.jpg" alt="Main image" class="main-image">
+            <div class="text-content">
+                <div class="highlighted-number">42</div>
+                <h2 class="space-grotesk-header">Jamal Musiala</h2>
+                <p class="space-grotesk-paragraph">Jamal Musiala (born 26 February 2003) is a German professional footballer who plays as an attacking midfielder or winger for Bundesliga club Bayern Munich and the Germany national team. Known for his dribbling, agility, and creative playmaking, he is regarded as one of Europe’s most promising young talents.</p>
+                <p class="space-grotesk-paragraph">Born in Stuttgart, Germany, Musiala spent much of his youth in England, developing his skills in Chelsea’s academy before joining Bayern Munich in 2019. He made his debut for the senior team in 2020 at the age of 17, quickly establishing himself as a key player for the club.</p>
+                <p class="space-grotesk-paragraph">Musiala chose to represent Germany at the international level despite being eligible for England as well. He debuted for the German national team in 2021 and has since been a regular, known for his ability to navigate tight spaces and make crucial plays under pressure.</p>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
