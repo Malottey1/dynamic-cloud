@@ -19,3 +19,7 @@ def musiala():
 @main.route("/bellingham")
 def bellingham():
     return render_template("bellingham.html")
+
+@main.route("/pedri")
+def pedri():
+    return render_template("pedri.html")
