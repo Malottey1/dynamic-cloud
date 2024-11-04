@@ -13,7 +13,7 @@ An interactive platform where football fans can read about Jude Bellingham, Pedr
 
 ## Tech Stack
 
-**Client:** React
+**Client:** Flask
 
 
 ## Run Locally
