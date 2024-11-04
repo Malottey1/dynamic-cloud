@@ -11,6 +11,7 @@ def index():
 def yamal():
     return render_template('yamal.html') 
 
-@app.route('/bellingham')
-def bellingham():
-    return render_template('bellingham.html') 
+#route for Musiala page
+@app.route('/musiala')
+def musiala():
+    return render_template('musiala.html')
