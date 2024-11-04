@@ -1,25 +1,21 @@
-from flask import render_template
-from . import create_app
+from flask import Blueprint, render_template
 
-app = create_app()
+# Define a blueprint
+main = Blueprint('main', __name__)
 
 
-@app.route("/")
+@main.route('/')
 def index():
-    return render_template("index.html")
+    return render_template('index.html')
 
-
-@app.route("/yamal")
+@main.route('/yamal')
 def yamal():
-    return render_template("yamal.html")
+    return render_template('yamal.html')
 
-
-# route for Musiala page
-@app.route("/musiala")
+@main.route('/musiala')
 def musiala():
-    return render_template("musiala.html")
+    return render_template('musiala.html')
 
-
-@app.route("/bellingham")
+@main.route("/bellingham")
 def bellingham():
     return render_template("bellingham.html")
